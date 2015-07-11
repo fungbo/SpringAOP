@@ -3,4 +3,5 @@
 vcs.xml
 workspace.xml
 *.class
+.idea
 target
