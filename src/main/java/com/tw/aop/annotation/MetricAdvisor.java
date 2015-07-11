@@ -10,17 +10,17 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 @Component
-public class WrapperAdvisor extends AbstractPointcutAdvisor {
+public class MetricAdvisor extends AbstractPointcutAdvisor {
     public static final long serialVersionUID = 1L;
 
     private final StaticMethodMatcherPointcut pointcut = new StaticMethodMatcherPointcut() {
         public boolean matches(Method method, Class<?> aClass) {
-            return method.isAnnotationPresent(Wrapper.class);
+            return method.isAnnotationPresent(Metric.class);
         }
     };
 
     @Autowired
-    private WrapperInterceptor interceptor;
+    private MetricInterceptor interceptor;
 
     public Pointcut getPointcut() {
         return this.pointcut;

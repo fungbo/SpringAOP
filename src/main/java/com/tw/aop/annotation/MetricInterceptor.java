@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
 
 @Component
-public class WrapperInterceptor implements MethodInterceptor {
+public class MetricInterceptor implements MethodInterceptor {
     public Object invoke(MethodInvocation methodInvocation) throws Throwable {
         StopWatch stopWatch = new StopWatch(methodInvocation.getMethod().toGenericString());
         stopWatch.start("invocation.proceed");

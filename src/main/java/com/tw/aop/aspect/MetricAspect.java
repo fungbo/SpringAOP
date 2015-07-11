@@ -13,7 +13,7 @@ import org.springframework.util.StopWatch;
 @Component
 @Configuration
 @EnableAspectJAutoProxy
-public class WrapperAspect {
+public class MetricAspect {
 
     @Pointcut("target(com.tw.model.Dumpling)")
     public void dumpling() {
