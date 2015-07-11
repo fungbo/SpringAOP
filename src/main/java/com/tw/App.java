@@ -12,9 +12,11 @@ public class App {
     public static final ApplicationContext context;
     private List<Food> foods = new ArrayList<Food>();
     @Autowired
-    Food noodle;
+    private Food noodle;
     @Autowired
-    Food rice;
+    private Food rice;
+    @Autowired
+    private Food dumpling;
 
     static {
         context = new ClassPathXmlApplicationContext("spring.xml");
@@ -29,6 +31,7 @@ public class App {
     void prepareFoods() {
         foods.add(noodle);
         foods.add(rice);
+        foods.add(dumpling);
     }
 
     void printFoods() {

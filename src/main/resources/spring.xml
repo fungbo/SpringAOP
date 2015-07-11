@@ -7,12 +7,13 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-       <context:annotation-config/>
-       <context:component-scan base-package="com.tw"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="com.tw"/>
 
-       <bean name="app" class="com.tw.App"/>
 
-       <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
-              <property name="proxyTargetClass" value="true"/>
-       </bean>
+    <bean name="app" class="com.tw.App"/>
+
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
 </beans>
